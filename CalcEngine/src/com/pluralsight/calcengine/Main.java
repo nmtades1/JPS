@@ -38,5 +38,23 @@ public class Main {
         equationOverload.execute((double)leftInt,rightInt);
         System.out.println("Results Int CAS: ");
         System.out.println(equationOverload.getResult());
+
+        // Start of use Calculate base / Inheritance.
+        System.out.println();
+        System.out.println("Inheritance");
+        System.out.println();
+
+        CalculateBase[] calc = {
+                new Divider(100.0d, 50.0d),
+                new Adder(25.0d, 92.0d),
+                new Subtracter(225.0d, 17.0d),
+                new Multiplier(11.0d, 3.0d)
+        };
+
+        for (CalculateBase calcs: calc){
+            calcs.calculate();
+            System.out.println(calcs.calcName() + " " + calcs.getResult());
+        }
+
     }
 }
